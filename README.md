@@ -154,14 +154,6 @@ aws --version
 aws configure
 
 
----
-
-### 1. Configuración y Credenciales
-
-* **Configurar credenciales y región inicial:**
-```bash
-aws configure
-
 ```
 
 
