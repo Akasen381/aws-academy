@@ -1,6 +1,5 @@
 # aws-academy
 
-Aquí tienes un archivo **`README.md`** completo, profesional y estructurado en Markdown, listo para que lo agregues a tu repositorio de GitHub. Documenta toda la arquitectura, estructura de bases de datos y la ejecución de tus prácticas de ingeniería de datos.
 
 ---
 
