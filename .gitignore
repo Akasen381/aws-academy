@@ -1,0 +1,10 @@
+# Configuración y credenciales
+config.yaml
+**/config.yaml
+
+# Entornos virtuales y caché
+venv/
+env/
+__pycache__/
+*.pyc
+.DS_Store
