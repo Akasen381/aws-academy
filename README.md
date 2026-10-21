@@ -153,6 +153,103 @@ aws --version
 # Configurar credenciales y región por defecto (us-east-1)
 aws configure
 
+
+---
+
+### 1. Configuración y Credenciales
+
+* **Configurar credenciales y región inicial:**
+```bash
+aws configure
+
+```
+
+
+*(Te pedirá tu `AWS Access Key ID`, `AWS Secret Access Key`, región por defecto como `us-east-1` y formato de salida).*
+* **Verificar la identidad del usuario actual:**
+```bash
+aws sts get-caller-identity
+
+```
+
+
+* **Ver la configuración activa:**
+```bash
+aws configure list
+
+```
+
+
+
+---
+
+### 2. Comandos para Amazon S3 (Almacenamiento)
+
+* **Listar todos tus buckets:**
+```bash
+aws s3 ls
+
+```
+
+
+* **Listar el contenido (archivos y carpetas) dentro de un bucket específico:**
+```bash
+aws s3 ls s3://nombre-del-bucket/
+
+```
+
+
+* **Subir un archivo local a S3:**
+```bash
+aws s3 cp archivo.txt s3://nombre-del-bucket/carpeta/
+
+```
+
+
+* **Descargar un archivo desde S3 a tu máquina local:**
+```bash
+aws s3 cp s3://nombre-del-bucket/carpeta/archivo.txt .
+
+```
+
+
+* **Sincronizar una carpeta local completa con un bucket en S3 (muy útil para respaldos):**
+```bash
+aws s3 sync ./mi-carpeta s3://nombre-del-bucket/mi-carpeta/
+
+```
+
+
+* **Eliminar un archivo en S3:**
+```bash
+aws s3 rm s3://nombre-del-bucket/archivo.txt
+
+```
+
+
+
+---
+
+### 3. Comandos para Amazon EC2 (Instancias y Servidores)
+
+* **Listar tus instancias EC2 y su estado actual:**
+```bash
+aws ec2 describe-instances
+
+```
+
+
+* **Filtrar el estado de las instancias (ej. ver solo las que están en ejecución):**
+```bash
+aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
+
+```
+
+
+
+---
+
+¿Hay algún servicio o tarea específica de AWS que necesites automatizar o consultar en este momento?
 ```
 
 *(También puedes verificar o editar manualmente las credenciales en `~/.aws/credentials`)*.
