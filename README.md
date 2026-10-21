@@ -249,7 +249,6 @@ aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
 
 ---
 
-¿Hay algún servicio o tarea específica de AWS que necesites automatizar o consultar en este momento?
 ```
 
 *(También puedes verificar o editar manualmente las credenciales en `~/.aws/credentials`)*.
