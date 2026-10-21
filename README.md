@@ -140,7 +140,85 @@ __pycache__/
 
 ## 👨‍💻 Autor
 
-Desarrollado como parte de las prácticas académicas de la carrera de **Ingeniería en Desarrollo y Gestión de Software (IDyGS)**.
+---
+
+### 1. Configuración de AWS CLI y Credenciales
+
+Para asegurar que tu instancia se conecte correctamente al bucket de AWS S3 y utilice las credenciales temporales:
+
+```bash
+# Verificar la instalación o versión de la CLI de AWS
+aws --version
+
+# Configurar credenciales y región por defecto (us-east-1)
+aws configure
+
+```
+
+*(También puedes verificar o editar manualmente las credenciales en `~/.aws/credentials`)*.
+
+---
+
+### 2. Creación y Activación del Entorno Virtual de Python
+
+Para mantener aisladas las librerías del proyecto:
+
+```bash
+# Crear el entorno virtual llamado 'venv' (o 'pipeline')
+python3 -m venv venv
+
+# Activar el entorno virtual
+source venv/bin/activate
+
+```
+
+---
+
+### 3. Instalación de Dependencias del Proyecto
+
+Una vez activo el entorno virtual, instala las librerías necesarias (`boto3`, `pandas`, `sqlalchemy`, `scikit-learn`, `faker`, etc.):
+
+```bash
+# Actualizar pip
+pip install --upgrade pip
+
+# Instalar todas las dependencias principales del proyecto
+pip install boto3 pandas numpy pyyaml sqlalchemy psycopg2-binary scikit-learn faker matplotlib seaborn
+
+# (O si ya cuentas con un archivo de requerimientos)
+pip install -r requirements.txt
+
+```
+
+---
+
+### 4. Configuración y Servicio de PostgreSQL (`laboratorios_db`)
+
+Si necesitas gestionar el servicio local de la base de datos en tu instancia EC2:
+
+```bash
+# Actualizar paquetes e instalar PostgreSQL y cliente
+sudo apt update && sudo apt install postgresql postgresql-contrib -y
+
+# Iniciar y habilitar el servicio de PostgreSQL
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+# Acceder a la consola de PostgreSQL como usuario postgres
+sudo -u postgres psql
+
+# Comandos útiles dentro de psql para crear la base de datos:
+# CREATE DATABASE laboratorios_db;
+# \l  (para listar bases de datos)
+# \q  (para salir)
+
+```
+
+---
+
+
+
+```
 
 ```
 
