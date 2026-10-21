@@ -6,8 +6,6 @@
 ```markdown
 # 🚀 Data Engineering Labs & ETL Pipelines (AWS S3 & PostgreSQL)
 
-Repositorio oficial que contiene el desarrollo de prácticas y pipelines de ingeniería de datos, modelado multidimensional (Data Warehouse / Esquemas Estrella) y automatización ETL utilizando **Python**, **Pandas**, **scikit-learn**, **Boto3**, **SQLAlchemy** y **PostgreSQL**, desplegado sobre una instancia **AWS EC2 (Ubuntu)**.
-
 ---
 
 ## 📂 Estructura del Proyecto
